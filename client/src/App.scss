@@ -1,0 +1,153 @@
+$primaryBtn : red;
+$textColor: #000;
+$padLeftAndRight: 0 10px;
+
+@mixin flexCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@mixin toCenter{
+   margin: 0 auto;
+   display: block;
+}
+
+@mixin callBootstrap {
+   position: relative;
+   float: left;
+}
+
+#root {
+   max-width: 1400px;
+   margin: 0 auto;
+}
+
+.img-container {
+   padding: 10px 0;
+}
+
+.img-container img {
+   width: 170px;
+}
+
+header{
+   @include flexCenter();
+   background: lightblue;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+}
+
+.Hero {
+   background-image: url('../src/images/avengers-hero-image.jpg');
+   background-size: cover;
+   height: auto;
+   min-height: 520px;
+}
+ .col-sm-12 {
+    @include callBootstrap();
+    width: 100%;
+}
+ .col-sm-4 {
+   @include callBootstrap();
+    width: 33%;
+}
+.container {
+   @include toCenter();
+   max-width: 1300px;
+   width: 100%;
+}
+.wrapper {
+   height: auto;
+   min-height: 200px;
+   margin-top: 30px;
+   background-color: #fff;
+   border-radius: 4px;
+   box-shadow: 2px black;
+}  
+.tweets {
+   border: 1px solid;
+   min-height: 200px;
+   h1 {
+      padding: $padLeftAndRight;
+   }
+   p {
+      padding: $padLeftAndRight;
+      font-size: .8em;
+   } span{
+      position: absolute;
+      right: 0;
+      float: right;
+      bottom: 0;
+      font-size: .7em;
+      padding-right: 10px;
+   }
+}
+ .related-movies {
+   background: #000;
+   position: relative;
+   float: left;
+   width: 100%;
+   padding-bottom: 2%;
+   margin-top: 2%;
+}
+.container {
+   max-width: 1300px;
+   margin: 0 auto;
+   h2 {
+      color: #000;
+   }
+}
+.img-responsive {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+.related-movies h2 {
+   color: #fff;
+}
+.col-sm-2 {
+   @include callBootstrap();
+   width: 16.66666667%;
+}
+.col-sm-3 {
+   @include callBootstrap();
+   width: 25%;
+}
+.parent {
+   display: flex;
+   flex-wrap: wrap;
+ } 
+.child {
+   flex: 1 0 23%;
+   margin: 5px;
+   height: auto;
+}
+.avenge {
+   background: #fff;
+}
+.avenge h2 {
+   color: #000;
+}
+ @media screen and (max-width: 700px){
+   .parent {
+      flex-direction: column;
+   }
+   .child {
+      justify-self: center;
+   }
+   .img-responsive {
+      @include toCenter()
+   }
+   .wrapper {
+      @include toCenter();
+      width: 100%;
+   }
+   .tweets {
+      font-size: 1.25em;
+   }
+   .col-sm-3 {
+      width: 100%;
+   }
+ }
