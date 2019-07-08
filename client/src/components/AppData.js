@@ -23,20 +23,20 @@ export class AppData extends Component{
   }
 
   componentWillMount(){
-    fetch("search/tweets").then(res =>
+     fetch("search/tweets").then(res =>
       res.json().then(data => {
         var arr = [];
-        this.getData(data, arr);
+        arr = this.getData(data, arr);
+        const results = JSON.parse(localStorage.getItem("arr"));
+        this.setState({ users: results });
       })
     )
   }
 
   render(){  
-    const results = JSON.parse(localStorage.getItem("arr"));
-
     return( 
     <div className="col-sm-12">            
-        {results.map((item, index) => (                
+        {this.state.users.map((item, index) => (                
             <div key={index} className="col-sm-4 wrapper parent">
                 <div className="col-sm-12 tweets child" key={index}>
                     <h1>{item.screenName}</h1>
