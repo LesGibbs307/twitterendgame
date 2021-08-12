@@ -8,12 +8,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "scripts": { "start": "react-scripts --expose-gc --max-old-space-size=8192 start", "build": "react-scripts --expose-gc --max-old-space-size=8192 build" },
   "proxy": "http://localhost:5001",
   "eslintConfig": {
     "extends": "react-app"
