@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class Hero extends Component {
-    render(){
-      return (
-        <section className="Hero"></section>
-      );
-    }
-  }
+function Hero(){
+  return(
+    <section className="Hero"></section>
+  );
+}
 
-  export default Hero;
+export default Hero;

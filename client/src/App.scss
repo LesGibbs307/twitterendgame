@@ -32,11 +32,15 @@ $padLeftAndRight: 0 10px;
 
 header{
    @include flexCenter();
-   background: lightblue;
+   background: #000;
    display: -webkit-box;
    display: -ms-flexbox;
    -webkit-box-pack: center;
    -ms-flex-pack: center;
+}
+
+h3 {
+   text-align: center;
 }
 
 .Hero {
